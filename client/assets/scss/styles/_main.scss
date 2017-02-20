@@ -1,0 +1,36 @@
+.main {
+	background-color: #e3e3e4;
+	overflow: auto;
+	position: absolute;
+    bottom: 0;
+    top: 70px;
+    right: 0;
+    left: 0;
+
+	@media only screen and (max-width: 455px) {
+    	top: 150px;
+    }
+}
+
+.main__login {
+	text-align: center;
+	color: $text__color--2;
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 80px;
+
+	h1 {
+		text-align: center;
+   		margin-top: em(0);
+   		font-size: em(35);
+	}
+
+	h2 {
+		padding: em(10);
+		font-size: em(20);
+	}
+}
+
+

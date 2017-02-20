@@ -1,0 +1,39 @@
+
+.search-bar__form {
+	width: em(350);
+    margin: auto;
+    color: $text__color--3;
+
+    @media only screen and (max-width: 55px) {
+		margin: auto;
+	}
+
+	@media only screen and (max-width: 455px) {
+		width: 100%;
+	}
+}
+
+.search-bar__form input[type="text"] {
+	padding: em(10.5);
+	border: none;
+	outline: none;
+	margin-right: em(10);
+	border-radius: em(5);
+	box-shadow: 0 0 3px 2px #ccc inset;
+	font-weight: 600;
+
+	&:focus {
+		box-shadow: 0 0 3px 1px #90c7ef inset;
+	}
+
+    @media only screen and (max-width: 455px) {
+		width: 100%;
+	    margin-bottom: 10px;
+	    margin-top: 10px;
+	    margin-right: 0;
+	}
+}
+
+.search-bar__form button {
+    margin: 0;
+}

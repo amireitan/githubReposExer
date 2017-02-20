@@ -1,0 +1,23 @@
+/*******************
+	App Header
+ *******************/
+.app__header {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top:0;
+    padding: em(15) 0;
+    border-radius: 0;
+    color: #fff;
+    border: none;
+    background-color: #fbfbfb;
+    box-shadow: 5px 6px 8px 0 #ddd;
+}
+
+/*********************
+	Menu Buttons
+ *********************/
+.app__header__menu-buttons__log {
+	float: right;
+	height: 100%;
+}

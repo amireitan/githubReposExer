@@ -1,0 +1,157 @@
+
+%line-height-basic-info {
+	line-height: 35px;
+}
+
+/*************************
+	list of items  - main
+***************************/
+.list {
+  max-width: 1000px;
+  padding: 0;
+  text-align: center;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.list__item {
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 30%;
+  padding: 20px;
+  margin: 15px;
+  border-bottom: em(2) solid #f0f0f0;
+  border-radius: 5px;
+  background-color: #fff;
+  min-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: auto;
+
+  @media only screen and (max-width: 920px) {
+    width: 40%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px #ccc;;
+    transition: all 0.25s;
+  }
+}
+
+
+.list__item:last-child {
+	margin-bottom: 0;
+}
+
+.list__item__name {
+	@extend %line-height-basic-info;
+	color: $text__color--1;
+	font-weight: 600;
+	font-size: em(17);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list__item__info {
+	@extend %line-height-basic-info;
+	font-size: em(15);
+	font-weight: 500;
+	color: $text__color--2;
+  font-style: italic;
+
+  i {
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+  }
+
+}
+
+.list__item__button-container {
+    width: em(150);
+    float: none;
+    margin: auto;
+}
+
+%basic-item-info {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.info__item--watch,
+.info__item--score,
+.info__item--stars{
+  @extend %basic-item-info;
+
+  i {margin-left:3px;}
+}
+
+
+.info__item__info__item--update{
+  display: block;
+  i {margin-left:3px;}
+}
+
+
+/**************************************
+ 	  List with images (contributors..)
+ ***************************************/
+
+.list__images__container {
+  width: 100%
+}
+
+.list__images {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .login, .contributions {
+  	font-size: em(14);
+    font-weight: 600;
+    color: $text__color--2;
+  }
+
+  .login {
+    font-weight: 700;
+     color: $text__color--1;
+  }
+
+  .list__images__contrib {
+    vertical-align: middle;
+    padding: em(13);
+    border-bottom: 1px solid #f3f3f3;
+
+    .image {
+      img{
+        border-radius : 10%;
+        width: em(60);
+        height: em(60);
+      }
+    }
+
+    > * {
+      display: inline-block;
+      width: 33%;
+      vertical-align: middle;
+    }
+  }
+
+  .name {
+    width: em(150);
+  }
+}
+
+
+

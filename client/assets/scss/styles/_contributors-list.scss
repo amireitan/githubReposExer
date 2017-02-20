@@ -1,0 +1,15 @@
+.contributers__List__item {
+	display: inline-block;
+    width: 100%;
+    width: 100px;
+
+	@extend .u-clearFix;
+
+    span {
+    	display: inline-block;
+    }
+
+    float: left;
+}
+
+

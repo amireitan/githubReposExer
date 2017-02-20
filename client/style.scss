@@ -1,0 +1,21 @@
+
+/************************
+		Scss root
+ ************************/
+// Basic Settings
+// @import 'assets/styles/normalize';
+@import 'assets/scss/reset';
+@import 'assets/scss/base';
+@import 'assets/scss/text';
+@import 'assets/scss/utils';
+
+
+//Styles
+@import 'assets/scss/styles/spinner';
+@import 'assets/scss/styles/app__header';
+@import 'assets/scss/styles/main';
+@import 'assets/scss/styles/list';
+@import 'assets/scss/styles/button';
+@import 'assets/scss/styles/search-bar';
+@import 'assets/scss/styles/contributors-list';
+@import 'assets/scss/styles/modal';

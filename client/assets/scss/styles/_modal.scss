@@ -1,0 +1,144 @@
+
+$gray: #333;
+$gray-light: #aaa;
+$gray-lighter: #eee;
+$space: 40px;
+$blue: #428bca;
+$blue-dark: #428bca;
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+/************************
+        Modal
+ ************************/
+.modal{
+  transition: 2s all;
+  &:before{
+    content: "";
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+}
+
+
+@keyframes fromTop {
+    from {top: -50%; width: 0}
+    to   {top: 5%; width: auto}
+}
+
+.modal__dialog{
+    background: #fefefe;
+    border: $gray solid em(1);
+    border-radius: em(5);
+    margin-left: em(-180);
+    position: fixed;
+    left: 50%;
+    z-index: 11;
+    min-width: em(360);
+    max-width: em(500);
+    top: 5%;
+    height: 90%;
+    padding-bottom: em(20);
+    overflow: hidden;
+    animation-fill-mode: forwards;
+    animation-name: fromTop;
+    animation-duration: 0.3s;
+
+    @media only screen and (max-width: 450px) {
+      min-width: 304px;
+      width: 300px;
+      height: 300px;
+      left: 50%;
+      margin-left: -152px;
+    }
+}
+
+.modal__body{
+  padding: $space/2;
+  height: 85%;
+  overflow: auto;
+  box-shadow: 0 0 em(14) #dfdee0 inset;
+}
+
+.modal__header,
+.modal__footer{
+  padding: em(15) em(20);
+}
+
+.modal__header{
+  border-bottom: $gray-lighter solid em(1);
+  font-size: em(17);
+
+  h2 {
+    font-size: em(20);
+  }
+
+  h3 {
+    font-weight: 700;
+    color: #000;
+    font-size: em(13);
+  }
+}
+
+.modal__footer{
+  border-top: $gray-lighter solid em(1);
+  text-align: right;
+}
+
+.wrap{
+  padding: $space;
+  text-align: center;
+}
+
+
+/*******************
+    button (modal)
+ *******************/
+.btn {
+  background: $blue;
+  border: $blue-dark solid 1px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  transition: color .1s ease;
+
+  &:hover{
+    background: $blue-dark;
+  }
+
+  &.btn-big{
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+  }
+
+}
+
+.btn-close{
+  color: $gray-light;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: em(8);
+  top: em(4);
+
+  &:hover{
+     color: darken($gray-light, 10%);
+  }
+
+}
+
+

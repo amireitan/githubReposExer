@@ -1,0 +1,115 @@
+.button {
+  text-decoration: none;
+  background-color: white;
+  color: $text__color--2;
+  border: none;
+  outline: none;
+  border-radius: em(7);
+  display: inline-block;
+  font-size: em(18);
+  font-weight: 600;
+  padding: em(10) em(5);
+  transition: background-color 0.25s;
+  cursor:pointer;
+}
+
+/*********
+   Sizes
+ *********/
+.button--small {
+  font-size: em(10);
+  padding: em(4);
+  font-weight: 300;
+}
+
+.button--mid {
+  font-size: em(15);
+  padding: em(9);
+  font-weight: 300;
+}
+
+.button--big {
+  font-size: em(20);
+  padding: em(25);
+  font-weight: 400;
+  margin-top: em(25);
+}
+
+/*********
+   Colors
+ *********/
+%button-basic-color {
+  border-color: #0074D9;
+  color: white;
+}
+
+.button--blue {
+  @extend %button-basic-color;
+  background-color: #0074D9;
+
+  &:hover {
+    background-color:#1a95ff
+  }
+}
+
+.button--green {
+  @extend %button-basic-color;
+  background-color: #6cc644;
+
+  &:hover {
+    box-shadow: 0 0 em(4) em(2) #bdc3b0;
+    background-color: white;
+    color: $text__color--2;
+  }
+}
+
+.button--grey {
+  @extend %button-basic-color;
+  background-color: #3a3a3a;
+
+  &:hover {
+    background-color: #7bb6ff;
+  }
+
+  @media only screen and (max-width: 455px) {
+    font-size: em(10);
+    padding: em(4);
+    font-weight: 300;
+    padding: 6px;
+  }
+}
+
+/*****************
+   types/state
+ ******************/
+.button--disabled {
+  background-color: #ebebe4;
+  color: $text__color--3;
+}
+
+.button--search {
+  margin: 0;
+  margin-left: em(8);
+  @extend .button--blue;
+  @media only screen and (max-width: 455px) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.button--contrib {
+  width: 10em;
+  padding-left: -0.66667em;
+  padding-right: 0.33333em;
+  font-size: 0.8em;
+  line-height: 2.33333em;
+
+  @media only screen and (max-width: 455px) {
+    font-size: em(10);
+
+    font-weight: 300;
+    padding: em(3)
+  }
+}
+
+

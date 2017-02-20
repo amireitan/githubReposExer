@@ -1,0 +1,21 @@
+.u-clearFix {
+	&:before, &:after {
+		content:"";
+		display:table;
+	}
+	&:after {
+		clear:both;
+	}
+}
+
+.u-sizeFill {
+	padding: 0 32px 0 32px;
+}
+
+.u-textCenter {
+	text-align: center;
+}
+
+.u-hidden {
+	visibility: hidden;
+}

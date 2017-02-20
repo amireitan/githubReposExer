@@ -1,0 +1,32 @@
+$text__family-sans: 'Helvetica Neue', sans-serif;
+
+$text__color--1: #333333;
+$text__color--2: #666666;
+$text__color--3: #767676;
+
+@mixin text(
+	$size, $line, $margin:0, $family: $text__family-sans,
+	$color: $text__color--1, $weight:noraml) {
+
+	font-size: em($size);
+	line-height: ($line/$size);
+	font-family: $family;
+	color: $color;
+	margin-bottom: em($margin, $size);
+}
+
+html {
+	font-size: $base__font-size * 1px;
+}
+
+body {
+	font-family: $text__family-sans;
+}
+
+/************************
+		Input-Text
+ ************************/
+
+ input[type="text"] {
+	color: $text__color--2;
+ }
